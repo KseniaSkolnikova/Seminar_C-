@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\House\\Downloads\\Seminar1\\0\\Seminar1.csproj",
-      "projectName": "Seminar1",
-      "projectPath": "C:\\Users\\House\\Downloads\\Seminar1\\0\\Seminar1.csproj",
+      "projectUniqueName": "C:\\Users\\House\\Downloads\\Seminar1\\8\\8.csproj",
+      "projectName": "8",
+      "projectPath": "C:\\Users\\House\\Downloads\\Seminar1\\8\\8.csproj",
       "packagesPath": "C:\\Users\\House\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\House\\Downloads\\Seminar1\\0\\obj\\",
+      "outputPath": "C:\\Users\\House\\Downloads\\Seminar1\\8\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\House\\AppData\\Roaming\\NuGet\\NuGet.Config"
