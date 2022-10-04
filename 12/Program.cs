@@ -1,14 +1,19 @@
-﻿// 
+﻿// Написать программу, которая будет принимать на вход два числа и выводить,
+// является ли торое число кратным первому.
+// Если число 2 не кратно числу 1, то программа выводит остаток от деления.
+// 34,5 -> не кратно, остаток 4
+// 16,4 -> кратно
 
-Console.WriteLine("Введите первое число: ");
-int a = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите второе число: ");
-int b = int.Parse(Console.ReadLine()!);
-if (a % b == 0)
+Console.Clear();
+int a = new Random().Next(10,100);
+int b = new Random().Next(1,10);
+int result = a % b;
+
+if (result == 0)
 {
-    Console.Write("Кратное");
+    Console.WriteLine($"Число {a} кратно {b}");
 }
 else
 {
-    Console.Write($"Остаток {a % b}");
+    Console.WriteLine($"Число {a} не кратно {b}, остаток - {result}");
 }
