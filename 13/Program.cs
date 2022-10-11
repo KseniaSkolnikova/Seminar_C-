@@ -4,14 +4,28 @@
 // 32679 -> 6
 
 Console.Clear();
+Console.WriteLine("Показать третью цифру числа.");
 Console.WriteLine("Введите число: ");
-int anyNumber = Convert.ToInt32(Console.ReadLine()!);
-string anyNumberText = Convert.ToString(anyNumber);
-if (anyNumberText.Length > 2)
+int x = int.Parse(Console.ReadLine()!);
+int x1 = x / 10;
+int num = x;
+if (x1 >= 10 || x1 <= -10)
 {
-    Console.WriteLine("третья цифра -> " + anyNumberText[2]);
+    while (x > 999 || x < -999)
+    {
+        x = x / 10;
+    }
+    if (x < 0)
+    {
+        x = -x;
+        Console.WriteLine($"Третья цифра числа {num} -> {(x % 10)} ");
+    }
+    else
+    {
+       Console.WriteLine($"Третья цифра числа {num} -> {(x % 10)} "); 
+    }
 }
 else
 {
-    Console.WriteLine("-> третьей цифры нет");
+    Console.WriteLine($"число {num} не трехзначное -> третьей цифры нет ");
 }
