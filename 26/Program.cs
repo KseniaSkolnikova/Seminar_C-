@@ -3,13 +3,23 @@
 // 78 -> 2
 // 89126 -> 5 
 
-Console.Write("Введите число А: ");
-int A = Convert.ToInt32(Console.ReadLine());
-int count = 0; //количество цифр в числе
-
-while (A > 0)
+int CountNumber(int a)
 {
-    A /= 10; // A = A/10
-    count++;
+    int count = 0;
+    if (a == 0)
+    {
+        return 1;
+    }
+    while (a != 0)
+    {
+        count++;
+        a = a / 10;
+    }
+    return count;
 }
-Console.WriteLine($"Количество цифр в числе = {count}");
+
+Console.WriteLine("Введите число:");
+int A = int.Parse(Console.ReadLine()!);
+int result = CountNumber(A);
+Console.WriteLine(result);
+
