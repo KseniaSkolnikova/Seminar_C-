@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\House\\Downloads\\УЧЁБА\\3. ОРАНЖЕВЫЙ\\2 семинар. Знакомство с функциями и массивами\\Seminar1\\18\\18.csproj",
+      "projectUniqueName": "C:\\Users\\House\\Downloads\\УЧЁБА\\3. ОРАНЖЕВЫЙ\\3 семинар. Массивы и функции в программировании\\Seminar1\\18\\18.csproj",
       "projectName": "18",
-      "projectPath": "C:\\Users\\House\\Downloads\\УЧЁБА\\3. ОРАНЖЕВЫЙ\\2 семинар. Знакомство с функциями и массивами\\Seminar1\\18\\18.csproj",
+      "projectPath": "C:\\Users\\House\\Downloads\\УЧЁБА\\3. ОРАНЖЕВЫЙ\\3 семинар. Массивы и функции в программировании\\Seminar1\\18\\18.csproj",
       "packagesPath": "C:\\Users\\House\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\House\\Downloads\\УЧЁБА\\3. ОРАНЖЕВЫЙ\\2 семинар. Знакомство с функциями и массивами\\Seminar1\\18\\obj\\",
+      "outputPath": "C:\\Users\\House\\Downloads\\УЧЁБА\\3. ОРАНЖЕВЫЙ\\3 семинар. Массивы и функции в программировании\\Seminar1\\18\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\House\\AppData\\Roaming\\NuGet\\NuGet.Config"
