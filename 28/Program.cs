@@ -2,13 +2,19 @@
 // 4 => 24
 // 5 => 120
 
-Console.Write("Введите число А: ");
-int A = int.Parse(Console.ReadLine()!);
 int sum = 1;
-
-for (int i = 1; i <= A; i++)
+void Mult(int a)
 {
-    Console.WriteLine($"i = {i}");
+  for (int i = 1; i <= a; i++)
+{
     sum = sum * i;
+}  
 }
+
+
+Console.Clear();
+Console.Write("Введите число a: ");
+int a = int.Parse(Console.ReadLine()!);
+Mult(a);
 Console.WriteLine($"Результат выполнения программы = {sum}");
+
