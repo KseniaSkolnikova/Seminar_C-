@@ -8,15 +8,14 @@ void Palindrom(int number)
 {
     if (number >= 10000)
     {
-        int decision1 = number / 10000;
-        int remainder1 = number % 10;
-
-        if (decision1 == remainder1)
+        int division1 = number / 10000;  // деление
+        int remainder1 = number % 10;    // остаток
+        if (division1 == remainder1)
         {
             number = number / 10;
-            int decision2 = number / 100;
+            int division2 = number / 100;
             int remainder2 = number % 10;
-            Console.Write("Число является палиндромом"); 
+            Console.Write("Число является палиндромом");
         }
         else
             Console.WriteLine("Число НЕ является палиндромом");
