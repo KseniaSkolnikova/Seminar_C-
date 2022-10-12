@@ -6,7 +6,7 @@ void Kub(int n)
 {
     for (int i = 1; i <= n; i++)
     {
-        Console.Write($"{i*i*i}");
+        Console.Write($"{i * i * i}");
         if (i! < n)
         {
             Console.Write(", ");
@@ -17,4 +17,4 @@ void Kub(int n)
 Console.Clear();
 Console.Write("Введите число: ");
 int N = int.Parse(Console.ReadLine()!);
-Kub (N);
+Kub(N);
