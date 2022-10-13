@@ -1,20 +1,24 @@
-﻿// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+﻿// Задача 25: Напишите цикл, который принимает на вход два числа 
+// (A и B) и возводит число A в натуральную степень B.
 // 3,5 -> 243 (3⁵)
 // 2,4 -> 16
 
-Console.Clear();
-Console.WriteLine("Введите число А: ");
-int a = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите число В: ");
-int b = int.Parse(Console.ReadLine()!);
-int result = 1;
+int numA = ReadInt("Введите число: ");
+int numB = ReadInt("Введите степень: ");
+GetStepen(numA, numB);
 
-
-for (int i = 1; i <= b; i++)
+void GetStepen(int a, int b)
 {
-    result = result * a;
-    Console.WriteLine(result);
+    int stepen = 1;
+    for (int i = 1; i <= b; i++)
+    {
+        stepen = stepen * a;
+    }
+    Console.WriteLine($"A в степени B равно = {stepen}"); 
 }
 
-Console.WriteLine($"A в степени B равно = {result}");
-
+int ReadInt(string message)
+{
+    Console.WriteLine(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
