@@ -5,16 +5,14 @@
 int sum = 1;
 void Mult(int a)
 {
-  for (int i = 1; i <= a; i++)
-{
-    sum = sum * i;
-}  
+    for (int i = 1; i <= a; i++)
+    {
+        sum = sum * i;
+    }
 }
-
 
 Console.Clear();
 Console.Write("Введите число a: ");
 int a = int.Parse(Console.ReadLine()!);
 Mult(a);
 Console.WriteLine($"Результат выполнения программы = {sum}");
-
