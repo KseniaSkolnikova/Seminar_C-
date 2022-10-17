@@ -3,40 +3,64 @@
 // 1,2,5,7,19 -> [1, 2, 5, 7, 19]
 // 6,1,33 -> [6, 1, 33]
 
-int n = 8;
-int[] array = new int[n];
 Console.Write("Введите ряд чисел, разделенных запятой : ");
-string Numbers = Console.ReadLine();
+string? seriesOfNumbers = Console.ReadLine();
 
-//for (int i = 0; i < array.Length; i++)
-//{
-//    array[i] = rand.Next(1,9);
-//}
+seriesOfNumbers = seriesOfNumbers + ",";    // дополнительня запятая для обозначения конца строки
 
-//Console.WriteLine(string.Join(", ", array));
-
-// пример
-int[] RandomArr()
+string RemovingSpaces(string series)    // функция удаления пробелов из строки
 {
-    int[] array = new int[8];
-    for (int i = 0; i < array.Length; i++)
+    string seriesNew = "";
+    for (int i = 0; i < series.Length; i++)
     {
-        array[i] = new Random().Next(2);
-    }
-    return array;
-
-}
-void PrintArray(int[] mass)
-{
-    for (int i = 0; i < mass.Length; i++)
-    {
-        Console.Write($"{mass[i]}");
-        if (i != mass.Length - 1)
+        if (series[i] != ' ')
         {
-            Console.Write(", ");
-
+            seriesNew += series[i];
         }
     }
+    return seriesNew;
 }
-int[] ArrayResult = RandomArr();
-PrintArray(ArrayResult);
+
+int[] ArrayOfNumbers(string seriesNew)   // функция  создания и заполнения массива из строки
+{
+    int[] arrayOfNumbers = new int[1];    // инициализация массива из 1 элемента
+    int j = 0;
+
+    for (int i = 0; i < seriesNew.Length; i++)
+    {
+        string seriesNew1 = "";
+        while (seriesNew[i] != ',' && i < seriesNew.Length)
+        {
+            seriesNew1 += seriesNew[i];
+            i++;
+        }
+        arrayOfNumbers[j] = Convert.ToInt32(seriesNew1);    // заполняет массив значениями из строки
+        if (i < seriesNew.Length - 1)
+        {
+            arrayOfNumbers = arrayOfNumbers.Concat(new int[] { 0 }).ToArray();    // добавляет новый нулевой элемент в конец массива
+        }
+        j++;
+    }
+    return arrayOfNumbers;
+}
+
+void PrintArry(int[] mass)     // функция  вывода массива на печать 
+{
+    int count = mass.Length;
+    int index = 0;
+    Console.Write("[");
+    while (index < count)
+    {
+        Console.Write(mass[index]);
+        index++;
+        if (index < count)
+        {
+            Console.Write(", ");
+        }
+    }
+    Console.Write("]");
+}
+
+string seriesNew = RemovingSpaces(seriesOfNumbers);
+int[] arrayOfNumbers = ArrayOfNumbers(seriesNew);
+PrintArry(arrayOfNumbers);
