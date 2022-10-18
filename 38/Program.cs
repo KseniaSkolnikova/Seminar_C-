@@ -4,13 +4,15 @@
 // [3 7 22 2 78] -> 76  
 
 
-double[] randomArray(int size)
+double[] array = randomArray(4, -10, 100);
+
+double[] randomArray(int size, int minValue, int maxValue)
 {
     Random random = new Random();
     double[] array = new double[size];
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < size; i++)
     {
-        array[i] = Math.Round(random.NextDouble(), 3);
+        array[i] = new Random().Next(minValue, maxValue + 1);
     }
     return array;
 }
@@ -44,6 +46,5 @@ double numerMax(double[] array)
 
 
 Console.Clear();
-double[] array = randomArray(4);
 Console.WriteLine(String.Join(", ", array));
-Console.WriteLine($"[{string.Join(",", array)}] разница равна -> {(Math.Round(numerMax(array) - numerMin(array), 3))}");
+Console.WriteLine($"[{string.Join(",", array)}] разница равна -> {(Math.Round(numerMax(array) - numerMin(array)))}");
