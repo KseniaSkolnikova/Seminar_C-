@@ -15,11 +15,14 @@ int[] Fibanachi(int N)
 
     for (int i = 2; i < N; i++)
     {
-        array[i] = array[i-1] + array[i-2];
+        array[i] = array[i - 1] + array[i - 2];
     }
-return array;
+    return array;
 
 }
+
 Console.Clear();
-int[] array = Fibanachi(5);    // здесь меняем N
+Console.WriteLine("Введите  число: ");
+int num = int.Parse(Console.ReadLine()!);
+int[] array = Fibanachi(num);    // здесь меняем N
 Console.WriteLine(string.Join(" ", array));
