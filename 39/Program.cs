@@ -30,7 +30,7 @@ void ReversArray1(int[] inArray)    // переворачиваем массив
 
 int[] ReverseArray2(int[] inArray)   // создаем массив вручную
 {
-    int[] result = new int[inArray.Length];
+    int[] result = new int[inArray.Length];  // выделяем память, нежелательный метод 
 
     for (int i =0; i < inArray.Length; i++)
     {
@@ -44,3 +44,6 @@ Console.WriteLine(String.Join(" ", array));
 
 ReversArray1(array);   // выводим 
 Console.WriteLine(String.Join(" ", array));
+
+// int[] newArray = ReverseArray2(array);
+// Console.WriteLine(String.Join(" ", array));
