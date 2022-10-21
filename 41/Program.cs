@@ -3,56 +3,33 @@
 // -1,-7,567,89,223 -> 3
 // 0,7,8,-2,-6 -> 2
 
+int[] GetArrayFromString(string stringArray)  // константа2
+{
+    string[] nums = stringArray.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+    int[] res = new int[nums.Length];
+
+    for (int i = 0; i < nums.Length; i++)
+    {
+        res[i] = int.Parse(nums[i]);
+    }
+    return res;
+}
+
+int CountPositive(int[] array)
+{
+    int count = 0;
+    foreach (int el in array)
+    {
+        if (el > 0) count++;
+    }
+    return count;
+}
+
 Console.Clear();
-Console.Write("Введите числа через запятую: ");
+Console.WriteLine("Введите числа через пробел: ");
+string input = Console.ReadLine()!;
 
-int[] numbers = StringToNum(Console.ReadLine());
+int[] numArray = GetArrayFromString(input);
+int count = CountPositive(numArray);
 
-int sum = 0;
-for (int i = 0; i < numbers.Length; i++)
-{
-    if (numbers[i] > 0)
-    {
-        sum++;
-    }
-}
-Console.WriteLine();
-Console.WriteLine($"Количество значений больше 0 = {sum}");
-
-
-int[] StringToNum(string input)
-{
-    int count = 1;
-    for (int i = 0; i < input.Length; i++)
-    {
-        if (input[i] == ',')
-        {
-            count++;
-        }
-    }
-
-    int[] numbers = new int[count];
-    int index = 0;
-
-    for (int i = 0; i < input.Length; i++)
-    {
-        string temp = "";
-
-        while (input[i] != ',')
-        {
-            if (i != input.Length - 1)
-            {
-                temp += input[i].ToString();
-                i++;
-            }
-            else
-            {
-                temp += input[i].ToString();
-                break;
-            }
-        }
-        numbers[index] = Convert.ToInt32(temp);
-        index++;
-    }
-    return numbers;
-}
+Console.WriteLine($"Чисел больше нуля: {count}");
