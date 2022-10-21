@@ -2,7 +2,7 @@
 //  может ли существовать треугольник с сторонами такой длины 
 // (каждая сторона треугольника меньше суммы двух других сторон).
 
-int[] GetArray(int size, int minValue, int maxValue)
+int[] GetArray(int size, int minValue, int maxValue)  // константа1
 {
     int[] res = new int[size];
 
@@ -29,11 +29,9 @@ for (int i = 0; i < 3; i++)
 
 if (IsTriungle(array[0], array[1], array[2]))
 {
-    Console.WriteLine("Существует");
+    Console.WriteLine("Треугольник существует");
 }
 else 
 {
-    Console.WriteLine("Не существует");
+    Console.WriteLine("Не существует треугольник");
 }
-
-
