@@ -39,7 +39,7 @@ int SumMainDiagonal(int[,] inArray)
     {
         for (int j = 0; j < inArray.GetLength(1); j++)
         {
-            if (i == j) sum = sum + inArray[i, j];
+            if (i == j) sum += inArray[i, j];
         }
     }
     return sum;
