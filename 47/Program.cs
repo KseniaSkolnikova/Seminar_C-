@@ -24,11 +24,11 @@ double[,] GetArray(int m, int n)
 
 void PrintArray(double[,] inArray)
 {
-    for (int i = 0; i < inArray.GetLength(0); i++)   // дина массива, строки
+    for (int i = 0; i < inArray.GetLength(0); i++)   
     {
-        for (int j = 0; j < inArray.GetLength(1); j++)   // длина массива, столбцы
+        for (int j = 0; j < inArray.GetLength(1); j++)   
         {
-            Console.Write($"{inArray[i, j]}\t ");   // красивый вид, табуляция
+            Console.Write($"{inArray[i, j]}\t ");   
         }
         Console.WriteLine();
     }
@@ -36,9 +36,9 @@ void PrintArray(double[,] inArray)
 
 Console.Clear();
 Console.Write("Введите количество строк в массиве: ");
-int row = int.Parse(Console.ReadLine()!);                    // строки
+int row = int.Parse(Console.ReadLine()!);                   
 Console.Write("Введите количество столбцов в массиве: ");
-int columns = int.Parse(Console.ReadLine()!);                // столбцы
+int columns = int.Parse(Console.ReadLine()!);               
 
 double[,] array = GetArray(row, columns);
 PrintArray(array);
