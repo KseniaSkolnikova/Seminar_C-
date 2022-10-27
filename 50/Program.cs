@@ -34,15 +34,8 @@ void PrintArray(int[,] inArray)
     }
 }
 
-Console.Write("Введите количество строк в массиве: ");
-int row = int.Parse(Console.ReadLine()!);
-Console.Write("Введите количество столбцов в массиве: ");
-int columns = int.Parse(Console.ReadLine()!);
 
-Console.WriteLine("Введите искомое число: ");
-int num = int.Parse(Console.ReadLine()!);
-
-int CheckArray(int[,] inArray, int num)
+void CheckArray(int[,] inArray, int num)
 {
     for (int i = 0; i < inArray.GetLength(0); i++)
     {
@@ -53,16 +46,25 @@ int CheckArray(int[,] inArray, int num)
                Console.WriteLine($"Есть такое число в массиве -> строка {i + 1} столбец {j + 1}"); 
             } 
         }
-        break;
+        return;
     }
-    // return num;
+    return;
     Console.WriteLine("Нет такого числа в массиве");
 }
 
 Console.Clear();
-int[,] array = GetArray(row, columns);
 
+Console.Write("Введите количество строк в массиве: ");
+int row = int.Parse(Console.ReadLine()!);
+Console.Write("Введите количество столбцов в массиве: ");
+int columns = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine("Введите искомое число: ");
+int num = int.Parse(Console.ReadLine()!);
+
+int[,] array = GetArray(row, columns);
+PrintArray(array);
 Console.WriteLine();
 Console.WriteLine("Проверяем есть ли заданное число");
-CheckArray(array);
-PrintArray(array);
+//CheckArray(array, num);
+//PrintArray(array);
