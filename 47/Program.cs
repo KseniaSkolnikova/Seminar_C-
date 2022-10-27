@@ -15,7 +15,7 @@ double[,] GetArray(int m, int n)
     for (int i = 0; i < m; i++)
         for (int j = 0; j < n; j++)
         {
-            array[i, j] = new Random().Next(-99, 99) / 10.0;;
+            array[i, j] = new Random().Next(-100, 100) / 10.0;
         }
 
     return array;
