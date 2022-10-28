@@ -15,9 +15,8 @@ int[,] GetArray(int m, int n)
     for (int i = 0; i < m; i++)
         for (int j = 0; j < n; j++)
         {
-            inArray[i, j] = new Random().Next(0, 100);
+            inArray[i, j] = new Random().Next(0, 21);
         }
-
     return inArray;
 }
 
@@ -34,9 +33,9 @@ void PrintArray(int[,] inArray)
     }
 }
 
-
 void CheckArray(int[,] inArray, int num)
 {
+    var existNumber = false;
     for (int i = 0; i < inArray.GetLength(0); i++)
     {
         for (int j = 0; j < inArray.GetLength(1); j++)
@@ -44,11 +43,11 @@ void CheckArray(int[,] inArray, int num)
             if (inArray[i, j] == num)
             {
                Console.WriteLine($"Есть такое число в массиве -> строка {i + 1} столбец {j + 1}"); 
+               existNumber = true;
             } 
         }
-        return;
     }
-    return;
+    if (!existNumber)
     Console.WriteLine("Нет такого числа в массиве");
 }
 
@@ -65,6 +64,5 @@ int num = int.Parse(Console.ReadLine()!);
 int[,] array = GetArray(row, columns);
 PrintArray(array);
 Console.WriteLine();
-Console.WriteLine("Проверяем есть ли заданное число");
-//CheckArray(array, num);
-//PrintArray(array);
+
+CheckArray(array, num);
