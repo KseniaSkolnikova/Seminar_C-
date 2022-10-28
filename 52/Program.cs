@@ -33,19 +33,19 @@ void PrintArray(int[,] inArray)
     }
 }
 
-double ArithmeticMeanInColumns(int[,] inArray)
+
+void ArithmeticMeanInColumns(int[,] inArray)
 {
-    double sum = 0;
+    Console.WriteLine("Среднее арифметическое каждого столбца: ");
     for (int j = 0; j < inArray.GetLength(1); j++)
     {
-
+        double sum = 0;
         for (int i = 0; i < inArray.GetLength(0); i++)
         {
             sum += inArray[i, j];
-            Console.WriteLine($"{sum / inArray.GetLength(0)} ");
         }
+        Console.Write($"{(sum / inArray.GetLength(0)):f2} ");
     }
-    return sum;
 }
 
 
