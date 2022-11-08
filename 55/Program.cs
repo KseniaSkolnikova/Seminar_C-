@@ -31,24 +31,12 @@ void PrintArray(int[,] inArray)
 
 void ReversArray(int[,] inArray)
 {
-    int[,] Result(int m, int n)  // ещё массив
-    {
-        int[,] inArray = new int[m, n];
-
-        for (int j = 0; j < m; j++)
-            for (int i = 0; i < n; i++)
-            {
-                inArray[j, i] = new Random().Next(0, 21);
-            }
-
-        return inArray;
-    }
     int n = inArray.GetLength(0);
     for (int j = 0; j < inArray.GetLength(0); j++)
     {
-        var tmp = inArray[0, j];
+        var temp = inArray[0, j];
         inArray[0, j] = inArray[n - 1, j];
-        inArray[0, j] = tmp;
+        inArray[0, j] = temp;
     }
     for (int j = 0; j < inArray.GetLength(1); j++)
     {
@@ -58,9 +46,7 @@ void ReversArray(int[,] inArray)
         }
         Console.WriteLine();
     }
-
 }
-
 
 
 Console.Clear();
