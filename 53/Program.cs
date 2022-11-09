@@ -1,7 +1,7 @@
 ﻿// Задача 53: Задайте двумерный массив. Напишите программу,
 // которая поменяет местами первую и последнюю строку массива.
 
-int[,] GetArray(int m, int n)
+int[,] GetArray(int m, int n)  // константа 4
 {
     int[,] inArray = new int[m, n];
 
@@ -15,7 +15,7 @@ int[,] GetArray(int m, int n)
 }
 
 
-void PrintArray(int[,] inArray)
+void PrintArray(int[,] inArray)   // констанкта 5
 {
     for (int i = 0; i < inArray.GetLength(0); i++)
     {
@@ -33,9 +33,9 @@ void NewMassiv(int[,] inArray)
     int n = inArray.GetLength(0);
     for (int i = 0; i < inArray.GetLength(1); i++)
     {
-        var tmp = inArray[n - 1, i];
+        var temp = inArray[n - 1, i];
         inArray[n - 1, i] = inArray[0, i];
-        inArray[0, i] = tmp;
+        inArray[0, i] = temp;
     }    
         for (int i = 0; i < inArray.GetLength(0); i++)
         {
@@ -46,7 +46,6 @@ void NewMassiv(int[,] inArray)
             Console.WriteLine();
         }
 }
-
 
 
 Console.Clear();
