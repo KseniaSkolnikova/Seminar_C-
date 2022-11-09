@@ -2,7 +2,7 @@
 // которая заменяет строки на столбцы. В случае, если это
 // невозможно, программа должна вывести сообщение для пользователя.
 
-int[,] GetArray(int m, int n)
+int[,] GetArray(int m, int n)  // константа 4
 {
     int[,] inArray = new int[m, n];
 
@@ -16,7 +16,7 @@ int[,] GetArray(int m, int n)
 }
 
 
-void PrintArray(int[,] inArray)
+void PrintArray(int[,] inArray)   // константа 5
 {
     for (int i = 0; i < inArray.GetLength(0); i++)
     {
@@ -29,25 +29,26 @@ void PrintArray(int[,] inArray)
 }
 
 
-void ReversArray(int[,] inArray)
+int[,] ChangeRowsToColumns(int[,] inArray)
 {
-    int n = inArray.GetLength(0);
-    for (int j = 0; j < inArray.GetLength(0); j++)
+    if (inArray.GetLength(0) == inArray.GetLength(1))
     {
-        var temp = inArray[0, j];
-        inArray[0, j] = inArray[n - 1, j];
-        inArray[0, j] = temp;
-    }
-    for (int j = 0; j < inArray.GetLength(1); j++)
-    {
+        int[,] resultArray = new int[inArray.GetLength(0), inArray.GetLength(1)];
         for (int i = 0; i < inArray.GetLength(0); i++)
         {
-            Console.Write($"{inArray[i, j]}\t ");
+            for (int j = 0; j < inArray.GetLength(1); j++)
+            {
+                resultArray[i, j] = inArray[j, i];
+            }
         }
-        Console.WriteLine();
+        return resultArray;
+    }
+    else
+    {
+        Console.WriteLine("Массив перевернуть невозможно");
+        return inArray;
     }
 }
-
 
 Console.Clear();
 Console.Write("Введите количество строк в массиве: ");
@@ -60,4 +61,5 @@ PrintArray(array);
 
 Console.WriteLine();
 Console.WriteLine("Новый массив теперь выглядит так: ");
-ReversArray(array);
+int[,] result = ChangeRowsToColumns(array);
+PrintArray(result);
