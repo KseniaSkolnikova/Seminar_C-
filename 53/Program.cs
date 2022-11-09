@@ -28,23 +28,16 @@ void PrintArray(int[,] inArray)   // констанкта 5
 }
 
 
-void NewMassiv(int[,] inArray)
+void ChangeFirstLastRows(int[,] inArray)
 {
-    int n = inArray.GetLength(0);
-    for (int i = 0; i < inArray.GetLength(1); i++)
+    int temp;
+    int n = inArray.GetLength(1);
+    for (int i = 0; i < inArray.GetLength(0); i++)
     {
-        var temp = inArray[n - 1, i];
-        inArray[n - 1, i] = inArray[0, i];
-        inArray[0, i] = temp;
+        temp = inArray[0, i];
+        inArray[0, i] = inArray[n - 1, i];
+        inArray[n - 1, i] = temp;
     }    
-        for (int i = 0; i < inArray.GetLength(0); i++)
-        {
-            for (int j = 0; j < inArray.GetLength(1); j++)
-            {
-                Console.Write($"{inArray[i, j]}\t ");
-            }
-            Console.WriteLine();
-        }
 }
 
 
@@ -57,8 +50,9 @@ int columns = int.Parse(Console.ReadLine()!);
 int[,] array = GetArray(row, columns);
 PrintArray(array);
 
-Console.WriteLine();
 Console.WriteLine("Новый массив теперь выглядит так: ");
-NewMassiv(array);
+ChangeFirstLastRows(array);
+Console.WriteLine();
+PrintArray(array);
 
 
