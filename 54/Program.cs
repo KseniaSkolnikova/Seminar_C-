@@ -1,7 +1,7 @@
 ﻿// Задача 54: Задайте двумерный массив. Напишите программу, 
 // которая упорядочит по убыванию элементы каждой строки двумерного массива.
 
-int[,] GetArray(int m, int n)  // константа 4
+int[,] GetArray(int m, int n)  
 {
     int[,] inArray = new int[m, n];
 
@@ -15,7 +15,7 @@ int[,] GetArray(int m, int n)  // константа 4
 }
 
 
-void PrintArray(int[,] inArray)   // константа 5
+void PrintArray(int[,] inArray)   
 {
     for (int i = 0; i < inArray.GetLength(0); i++)
     {
