@@ -13,9 +13,8 @@
 // 3 4 7
 
 Console.Clear();
-Console.WriteLine("Введите размер массива m x n и диапазон случайных значений:");
-int m = InputNumbers("Введите m: ");
-int n = InputNumbers("Введите n: ");
+int m = InputNumbers("Введите количество строк: ");
+int n = InputNumbers("Введите количество столбцов: ");
 int range = InputNumbers("Введите диапазон: от 1 до ");
 
 int[,] array = new int[m, n];
