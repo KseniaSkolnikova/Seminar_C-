@@ -10,6 +10,7 @@ string GetPrint(int start, int end)
     {
         return start.ToString();
     }
+//  Console.WriteLine($"f({start}, {end}) -> {start + " " + GetPrint(start + 1, end)}");
     return start + " " + GetPrint(start + 1, end);
 }
 
