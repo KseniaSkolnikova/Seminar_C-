@@ -4,21 +4,17 @@
 // N = 6 -> "1, 2, 3, 4, 5, 6"
 
 
-void PrintNumber(int n)
+string GetPrint(int start, int end)
 {
-    if (n < 1) return;
-    PrintNumber(n - 1);
-    Console.Write(n + " ");
+    if (start == end)
+    {
+        return start.ToString();
+    }
+    return start + " " + GetPrint(start + 1, end);
 }
-
-int InputNumbers(string input)
-{
-    Console.Write(input);
-    int output = Convert.ToInt32(Console.ReadLine());
-    return output;
-}
-
 
 Console.Clear();
-int n = InputNumbers("Введите n: ");
-PrintNumber(n);
+Console.Write("Введите количество число N: ");
+int n = int.Parse(Console.ReadLine()!);
+int m = 1;
+Console.WriteLine(GetPrint(m, n));
