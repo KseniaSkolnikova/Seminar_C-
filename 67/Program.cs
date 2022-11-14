@@ -9,7 +9,7 @@ int GetSum(int num)
     {
         return 0;
     }
-    return num = num%10 + GetSum(num/10);
+    return num%10 + GetSum(num/10);
 }
 
 
