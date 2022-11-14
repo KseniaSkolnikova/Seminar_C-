@@ -20,6 +20,6 @@ int FunctionAckerman(int m, int n)
 Console.Clear();
 Console.WriteLine("Введите число M: ");
 int m = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите степень N: ");
+Console.WriteLine("Введите число N: ");
 int n = int.Parse(Console.ReadLine()!);
 Console.WriteLine(FunctionAckerman(m, n));
