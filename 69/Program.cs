@@ -5,17 +5,13 @@
 
 
 
-int GetDegree(int number, int step)
+int GetDegree(int a, int b)
 {
-    if (step == 0)
+    if (b == 0)
     {
         return 1;
     }
-    else if (step == 1)
-    {
-        return number;
-    }
-    return number * GetDegree(number, step - 1);
+    return a * GetDegree(a, b - 1);
 }
 
 Console.Clear();
